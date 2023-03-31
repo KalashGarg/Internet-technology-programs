@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>square root of number</title>
+</head>
+<body>
+    <form action="sqrt.html">
+        enter no: <input type="text" id="number"><br>
+        <button type="button" onclick="squareroot()">check</button>
+    </form>
+    <script>
+        function squareroot(){
+            var num=document.getElementById("number").value;
+            if(num==""){
+                alert("enter some data");    
+            }
+            else if(num!= isNaN()){
+                if(num < 0){
+                    alert("positive numbers only");
+                }
+                else{
+                    var sq=Math.sqrt(num);
+                    alert(sq);
+                }
+            }
+            else{
+                alert("only numeric data allowed");
+            }
+        }
+    </script>
+</body>
+</html>

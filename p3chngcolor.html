@@ -1,0 +1,23 @@
+<HTML>
+    <title>change color</title>
+    <head>
+    <script language="javascript">
+        function my_function()
+        {
+            setTimeout('ppp()',1000);
+        }
+
+        function ppp()
+        {
+            var colorvalue=prompt("Enter Color","Blue");
+            document.getElementById("block").setAttribute("style","color:" +colorvalue);
+        }
+    </script>
+    </head>
+    <body>
+        <div id ="block">
+        <h1>Change My Text Color</h1>
+        </div>
+        <input type="button" value="Change Color" name="b" onClick="my_function()">
+    </body>
+</HTML>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+	<script language="javascript">
+		function chk(f1)
+		{
+			f1.check.checked=true;
+			alert("the checkbox just got checked");
+			
+			f1.Radio[0].checked= true;
+			f1.Radio[1].checked= false;
+			alert("the radio button just got checked");
+		}	 
+	</script>
+</head>
+<body>
+	<form>
+		Client name: <input type="text" name="text" value=""/><br><br><br>
+		Address : <input type="text" name="text1" value=""/><br><br><br>
+		<input type="radio" name="Radio" value=""/>MAlE
+		<input type="radio" name="Radio" value=""/>FEMAlE<br><br><br>
+		<input type="checkbox" name="check" value=""/>Employed<br><br><br>
+		<input type="button" name="bt" onclick="chk(this.form)" value="Set Element Array value"/>
+	</form>
+
+</body>
+</html>

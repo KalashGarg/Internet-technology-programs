@@ -1,0 +1,30 @@
+<html>
+		<title>check multiple</title>
+		<head>
+		<script language="javascript">
+			function check()
+			{
+				var num1=document.f1.n1.value;
+				var num2=document.f1.n2.value;
+
+                if(num1%num2==0){
+                    document.write("first number is multiple of second number ");
+                }else{
+                    document.write("first number is not multiple of second number ");
+                }
+            
+				
+				
+			}
+		</script>
+		</head>
+
+		<form name="f1">
+			first number : <input type="number" name="n1">
+			<br>
+			second number : <input type="number" name="n2">
+			<br>
+			<input type="button" name="b1" onClick="check()" value="check">
+			<input type="reset" name="b2" value="Reset">
+        
+		</form>

@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <title>using text and button objects in an html form</title>
+    <script language="javascript">
+        function cal(form){
+            form.results.value=eval(form.entry.value);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        enter javascript mathematical expression:<br/>
+        <input type="text" name="entry" value="" />
+        <input type="button" value="calculate" onclick="cal(this.form); " /><br/>
+        the result is:
+        <input type="text" name="results" onfocus="this.blur();" />
+    </form>
+</body>
+</html>

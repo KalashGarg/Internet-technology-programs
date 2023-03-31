@@ -1,0 +1,32 @@
+<html>
+		<title>Static password</title>
+		<head><h1 align="center"> Login Page </h1>
+		<script language="javascript">
+			function cLogin()
+			{
+				var u=document.f1.t1.value;
+				var d=document.f1.dob.value;
+                var e=document.f1.email.value;
+				
+				if(u=="parvez" && d=="21-01-2000" && e=="pppp@123")
+				{
+					alert("Login Successfully!!");
+				}
+				else 
+					alert("INVALID INFO !!");
+			}
+		</script>
+		</head>
+
+		<form name="f1">
+			Name : <input type="text" name="t1">
+			<br>
+			Date Of Birth: <input type="text" name="dob" id="dob" size="30">
+			<br>
+            email id: <input type="text" name="email" id="emailid" size="30">
+			<input type="button" name="b1" onClick="cLogin()" value="Login">
+			<input type="reset" name="b2" value="Reset">
+        
+		</form>
+</html>
+

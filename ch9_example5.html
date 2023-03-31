@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+	<script language="javascript">
+		function func(f1) {
+			alert("The Form Elements have been Cleared");
+		}
+	</script>
+</head>
+<body>
+	<form onreset="func(this.form)">
+		Client Name :- <input type="text" name="text1" value=""/><br><br><br>
+		Client Address :- <input type="text" name="text2" value=""/><br><br><br>
+		<input type="radio" name="radio" value=""/>Male
+		<input type="radio" name="radio" value=""/>Female<br><br><br>
+		<input type="checkbox" name="check" value=""/>Employed<br><br><br>
+		<input type="reset" name="rst" value="reset"/>
+	</form>
+</body>
+</html>

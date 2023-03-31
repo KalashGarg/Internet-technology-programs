@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating and using user defined functions</title>
+	<script language="JavaScript">
+		var name="";
+		function hello()
+		{
+			name=prompt("Enter your name:- ","Name");
+			alert("Greetings "+name+" Welcome to my page!");
+		}
+		function goodbye()
+		{
+			alert("goodbye "+name+" Sorry to see you go !");
+		}
+	</script>
+</head>
+<body onload="hello(); onUnload=goodbye();">
+	<img src="pic1.jpg">
+
+</body>
+</html>

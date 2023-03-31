@@ -1,0 +1,149 @@
+<html>
+		<title>Registration form</title>
+		<head>
+		<script language="javascript">
+		function check(form)
+		{
+			var n1;
+			var no;
+
+			if(document.f1.t11.value=="")
+			{
+				alert("First Name field can't be empty");
+				document.f1.t11.focus();
+				return false;
+			}
+
+			if(document.f1.t11.value!="")
+			{
+				var i;
+				var s=document.f1.t11.value;
+				var l=s.length;
+				for(i=0;i < l;i++)
+				{
+					if(!(s.charCodeAt(i)>64 && s.charCodeAt(i) < 91) || !(s.charCodeAt(i)>96 && s.charCodeAt(i) < 123))
+					{
+						alert("First name should be an alphabetic value.");
+
+						document.f1.t11.focus();
+						break;
+					}
+				}
+				return false;
+			}
+
+			if(document.f1.t2.value=="")
+			{
+				alert("Last Name field can't be empty");
+				document.f1.t2.focus();
+				return false;
+			}
+
+			if(document.f1.t2.value!="")
+			{
+				var i;
+				var s=document.f1.t2.value;
+				var l=s.length;
+				for(i=0;i < l;i++)
+				{
+					if(!(s.charAt(i)>64 && s.charAt(i) < 91) || !(s.charAt(i)>96 && s.charAt(i) < 123))
+						alert("Last name should be an alphabetic value.");
+					document.f1.t2.focus();
+					break;
+				}
+				return false;
+			}
+
+			if(document.f1.t3.value=="")
+			{
+				alert("Roll no. field can't be empty");
+				document.f1.t3.focus();
+				return false;
+			}
+
+			if(document.f1.t3.value!="" && isNaN(parseInt(document.f1.t3.value)))
+			{
+				alert("Roll no. must be a integer value.");
+				document.f1.t3.focus();
+				return false;
+			}
+
+			if(document.f1.t3.value!="")
+			{
+				var n=document.f1.t3.value;
+				var c=0;
+				if(n>1)
+					++c;
+				while(n/10>=1)
+				{
+					n=n/10;
+					++c;
+				}
+				if(c!=7)
+				{
+					alert("Roll no. must be a 7 digit number.")
+					document.f1.t3.focus();
+					return false;
+				}
+			}
+
+			if(document.f1.t4.value=="")
+			{
+				alert("Course Name. field can't be empty");
+				document.f1.t4.focus();
+				return false;
+			}
+
+			if(document.f1.t5.value=="")
+			{
+				alert("DOB field can't be empty");
+				document.f1.t5.focus();
+				return false;
+			}
+
+			if(!form.elements[5].checked)
+			{
+				alert("Gender must be selected");
+				return false;
+			}
+			return true;
+		}
+		</script>
+		</head>
+
+		<h1>Registration Form</h1>
+		<form name="f1">
+		First Name    <input type="text" name="t11">
+		<Br>
+		<Br>
+		Last Name    <input type="text" name="t2">
+		<Br>
+		<Br>
+		Roll no.    <input type="text" name="t3">
+		<Br>
+		<Br>
+		Course Name    <input type="text" name="t4">
+		<Br>
+		<Br>
+		Date Of Birth    <input type="text" name="t5">
+		<Br>
+		<Br>
+		Gender    <input type="Radio" name="rd1" id="id12"> Male
+		<input type="Radio" name="rd1" id="id1" > Female
+		<Br>
+		<Br>
+		Semester    <Select Value="Select" name="s1"/>
+			<option>I</option>
+			<option>II</option>
+			<option>III</option>
+			<option>IV</option>
+			<option>V</option>
+			<option>VI</option>
+		</Select>
+		<Br>
+		<Br>
+			<input type="button" name="b1" value="ok" onClick="check(this.form)">  
+			<input type="reset" name="b2" value="Cancel">
+
+		</form>
+	</html>

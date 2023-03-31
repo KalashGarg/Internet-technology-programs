@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORMS</title>
+	<script language="javascript">
+		function ver(form)
+		{
+			v=form.elements.length;
+			if(form.elements[3].name=="button1")
+			{
+				alert('First form name : '+document.forms[0].name);
+				alert('No. of form elementof '+document.forms[0].name+'='+v);
+			}
+			else if(form.elements[4].name=="button2")
+			{
+				alert('First form name : '+document.forms[1].name);
+				alert('No. of form elementof '+document.forms[1].name+'='+v);
+			}
+			for(i=0;i<v;i++)
+				alert(form.elements[i].name+' is at position '+i);
+		}
+	</script>
+</head>
+<body>
+	<form name="Survey Form1">
+		FIRST FORM: <I><B>Survey Form 1</B></I><br><br><br>
+		First Name: <input name="text1" type="text" value=""/><br><br><br>
+		<input name="radio1" type="radio" value=""/>Fresher
+		<input name="radio1" type="radio" value=""/>Experienced<br><br><br>
+		<input name="button1" onclick="ver(form)" type="button" value="click1"/>
+	</form>
+	<form name="Survey Form2">
+		SECOND FORM: <I><B>Survey Form 1</B></I><br><br><br>
+		First Name: <input name="text2" type="text" value=""/><br><br><br>
+		Passward: <input type="Passward" name="pass2" value=""/><br><br><br>
+		<input name="check1" type="checkbox" value=""/>Employed
+		<input name="check2" type="checkbox" value=""/>Studying<br><br><br>
+		<input name="button2" onclick="ver(form)" type="button" value="click2"/>
+	</form>
+</body>
+</html>

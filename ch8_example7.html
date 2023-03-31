@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            hello
+        </title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            var q="what is 10 + 10 ?";
+            var ans=20;
+            var incorrect='<img width="100" height="100" src="abc.jpg">';
+            var correct='<img width="100" height="100" src="doraemon.jpg">';
+            var res=prompt(q,"");
+            var count=1;
+            while (true){
+                if(res==ans){
+                    break;
+                }
+                else{
+                    confirm("your ans is wrong! please try again");
+                    res=prompt(q,"");
+                    if(count==2){break;}
+                }
+                count++;
+            }
+            /*for(i=0;i<3;i++){
+                if(res!=ans){
+                    confirm("wrong,try again");
+                    res=prompt(q,"0");
+                    if(i==1){
+                        alert("better luck next time");
+                    }
+
+                }
+                else{
+                    alert("great you are right");
+                    i=3;
+                }
+
+            }*/
+            var out=(res==ans)?correct: incorrect; 
+            document.write("<br/>"); 
+            document.write(out); 
+            
+        </script>
+    </body>
+</html>

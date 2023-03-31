@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>McDonalds</title>
+	<script language="javascript">
+		var m;import java.io.*; 
+import java.util.*; 
+  
+class ArrayListExample { 
+    public static void main(String[] args) 
+    { 
+        // Size of the 
+        // ArrayList 
+        int n = 5; 
+  
+        // Declaring the ArrayList with 
+        // initial size n 
+        ArrayList<Integer> arrli 
+            = new ArrayList<Integer>(n); 
+  
+        // Appending new elements at 
+        // the end of the list 
+        for (int i = 1; i <= n; i++) 
+            arrli.add(i); 
+  
+        // Printing elements 
+        System.out.println(arrli); 
+  
+        // Remove element at index 3 
+        arrli.remove(3); 
+  
+        // Displaying the ArrayList 
+        // after deletion 
+        System.out.println(arrli); 
+  
+        // Printing elements one by one 
+        for (int i = 0; i < arrli.size(); i++) 
+            System.out.print(arrli.get(i) + " "); 
+    } 
+}
+		function pick(f1)
+		 {
+			for(j=0;j<3;j++)
+			{
+				for(i=0;i<f1.elements[j].length;i++)
+				{
+					if (f1.elements[j][i]selected)
+					{
+						var y=f1.elements[j].options[i].value;
+						z=z+"\n"+y;
+						f1.elements[3].value=z;
+					}
+				}
+			}
+			m=z;
+		 }
+		 function cal(f1)
+		 {
+		 	var d=0;
+		 	for(j=0;j<3;j++)
+			{
+				for(i=0;i<f1.elements[j].length;i++)
+				{
+					if (f1.elements[j][i]selected)
+					{
+						var y=f1.elements[j].options[i].value;
+						s=new String(y);
+						var a= s.indexOf(">");
+						var b= s.substring(a+1,a+3);
+						c=parseInt(b);
+						d=d+c;
+					}
+				}
+			}
+			p="Total cost of selected items = "+d;
+			m=m+"\n"+p;
+			f1.elements[3].value=m;
+		 }
+		 function clr(f1)
+		 {
+		 	f1.elements[3].value=" ";
+		 }
+	</script>
+</head>
+<body>
+	<h2><center>
+		<span style="color: blue">Welcome to the World Famous  Food Center</span>
+		<span style="color: red">McDonalds!</span>
+	</center></h2>
+	<form name="f1">Select the Menu Item of your choice:-<br><br><br>
+		<table>
+			<tr valign="top"><td>Major Dishes:<br><br>
+			<select name="s1" multiple onblur="pick(this.form)">
+				<option value="Mc Burger->80" selected> Mc Burger</option>
+				<option value="Fish fillets->70" selected> Fish fillets</option>
+				<option value="chicken Burger->60" selected> chicken Burger</option>
+				<option value="Veg Burger->60" selected> Veg Burger</option>
+			</select><br><br>
+		    </td><td></td><td></td><td>
+			starters:<br><br>
+			<select name="s1" multiple onblur="pick(this.form)">
+				<option value="French Fries->40" selected>French Fries</option>
+				<option value="Nuggets->50" selected>Nuggets</option>
+				<option value="Hash Browns->55" selected> Hash Browns</option>
+				<option value="Mc Aloo Tikki->65" selected> Mc Aloo Tikki</option>
+			</select><br><br>
+		    </td><td></td><td></td><td>
+			Miscellaneous <br><br>
+			<select name="s1" onblur="pick(this.form)">
+				<option value="">Check These out</option>
+				<option value="Milkshakes->35" selected>Milkshakes</option>
+				<option value="Soft Drinks->20" selected> Soft Drinks</option>
+				<option value="Softy->25" selected> Softy</option>
+			</select><br><br>
+		    </td><td></td><td></td></tr>
+		</table><br><br>
+		<table>
+			<tr valign="top">
+				<td>The items selected from the menu are:-
+					<textarea name="ta1" rows="10" cols="50"></textarea><br><br>
+				</td><td></td><td></td><td>
+				<br><input type="button" value="Total Cost" onclick="cal(this.form)"/>	
+				<input type="button" value="Clear" onclick="clr(this.form)"/>
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>

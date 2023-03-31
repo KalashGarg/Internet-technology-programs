@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title></title>
+    <script language="javascript" >
+      function func(num) {
+        var n = num.value;
+        var answer = 0;
+         while ( n > 0) { 
+           var r = n%10;
+           if (n%2 == 0) {
+             answer = answer + r;
+             n =(n/10); 
+            }
+            console.log("answer ="+answer );    
+          }
+        console.log("answer ="+answer );
+          
+      }
+      //func(18906);
+   
+         
+    </script>
+</head>
+<body>
+  <form action="get">
+    <input type="button" name="b" value="click me" onclick="func(18906);"><br>
+  </form>
+  
+</body>
+</html>

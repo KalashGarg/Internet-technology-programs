@@ -1,0 +1,107 @@
+<html>
+<head>
+<script type="text/javascript">
+function validateHTMlform()
+{ 
+  let form = document.StudenSignupForm;
+  var f=form.dob.value;
+  var final="";
+   if( form.textnames.value == "" )
+   {
+     alert( "Enter Your First Name!" );
+     form.textnames.focus() ;
+     return;
+   }
+   if( form.lastnames.value == "" )
+   {
+     alert( "Enter Your Last Name!" );
+     form.textnames.focus() ;
+     return;
+   }
+  
+   
+   
+ var email = form.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Enter your correct email ID")
+     form.emailid.focus() ;
+     return;
+ }
+
+  if( form.dob.value == "" )
+   {
+     alert( "Enter your DOB!" );
+     form.dob.focus() ;
+     return;
+   }
+   
+   else{
+    var stu = f.split('/');
+    var wMonths=['january','february','march','april','may','june','july','august','september','october','november','december'];
+
+    final=stu[0] + " " + wMonths[parseInt(stu[1])-1] + " " + stu[2];
+      
+   }
+  if( form.rollno.value == "" ||
+           isNaN( form.rollno.value) ||
+           form.rollno.value.length != 3 )
+   {
+     alert( "Enter your RollNo in the format 123." );
+     form.rollno.focus() ;
+     return;
+   }
+   alert("your dob is "+final); 
+   return( true );
+   
+}
+</script>
+</head>
+ 
+<body>
+<form action="#" name="StudenSignupForm" onsubmit="return(validateHTMlform());">
+ 
+<div cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
+cellspacing="2">
+ 
+<ul>
+<li>
+<font size=4><b>Student Registration Form</b></font>
+</li>
+</ul>
+ 
+<ul>
+<li>First Name</li>
+<li><input type=text name=textnames id="textname" size="30"></li>
+</ul>
+ 
+  <ul>
+<li>
+  Last Name</li>
+<li><input type=text name=lastnames id="lastname" size="30"></li>
+</ul>
+  
+<ul>
+<li>student email</li>
+<li><input type="text" name="email_id" id="emailid" size="30"></li>
+</ul>
+ 
+<ul>
+<li>Date Of Birth</li>
+<li><input type="text" name="date_of_birth" id="dob" size="30"></li>
+</ul>
+ 
+<ul>
+<li>Roll Number</li>
+<li><input type="text" name="rollno" id="rollno" size="30"></li>
+</ul>
+<ul>
+<li><input type="reset"></li>
+<li colspan="2"><input type="submit" value="Submit Form" /></li>
+</ul>
+</div>
+</form>
+</body>
+</html>

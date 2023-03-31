@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <title>using text and button objects in an html form</title>
+    <script language="javascript">
+        function verifydata(){
+            a=0; r="";
+            for(i=0;i<=4;i++){
+                if(document.forms[0].elements[i].value==""){
+                    a=1;
+                r=r +" "+ document.forms[0].elements[i].name+";";
+                }
+                else if((i>3)&&(a==0)){
+                    alert("all textboxes are filled  thank you!");
+                }
+            }
+            for(i=0;i<=4;i++){
+                    if(document.forms[0].elements[i].value==""){
+                        alert("please fill the following text boxes :- " + r);
+                        document.forms[0].elements[i].focus();
+                        break;
+                    }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        first name: <input type="text" name="firstname" size=20 />
+        last name: <input type="text" name="lastname" size=20 />
+        <p>address:<input type="text" name="address" size=60 /></p>
+        <p>pincode:<input type="text" name="pincode" size=6 /></p>
+        <input type="button" name="act" value="verify" onclick="verifydata();" /><br/>
+
+    </form>
+</body>
+<script language="javascript">document.forms[0].firstname.focus();</script>
+</html>
